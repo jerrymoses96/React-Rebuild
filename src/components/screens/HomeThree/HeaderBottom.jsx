@@ -1,8 +1,7 @@
 import React from "react";
 import { Heading, Img, Input, Text } from "../..";
 import { CloseSVG } from "../../../assets/images";
-import "../../../styles/index.css"
-
+import "../../../styles/index.css";
 
 export function HeaderBottom(props) {
   return (
@@ -14,7 +13,7 @@ export function HeaderBottom(props) {
             alt="linkgrogin_one"
             className="w-[11%] md:w-full md:h-[34px] object-cover"
           />
-          <div className="flex flex-row justify-center w-[3%] md:w-full ml-[23px] p-[7px] md:ml-0 sm:ml-5 bg-deep_purple-600 rounded-[19px]">
+          <div className="flex flex-row justify-center w-[3%] md:w-full ml-[23px] p-[7px] md:ml-0 sm:ml-5 bg-rose-100 rounded-[19px]">
             <Img
               src="images/img_link_black_900.svg"
               alt="link_one"
