@@ -1,8 +1,12 @@
 import React from "react";
-import { Text, Heading } from "../..";
-import "../../../styles/index.css";
+import { Text, Heading } from "../../..";
+import "../../../../styles/index.css";
+import useCountdownTimer from "../../../helpers/CountDown";
 
 export function HeaderTop() {
+  const endDate = new Date("2024-05-01"); // Set your end date here
+  const { days, hours, minutes, seconds } = useCountdownTimer(endDate);
+
   return (
     <div className="w-[100%] bg-deep_purple-600">
       <div className="wrapper flex flex-row md:flex-col justify-center  w-full gap-[194px] p-[9px] md:gap-10">
@@ -27,7 +31,7 @@ export function HeaderTop() {
             as="h6"
             className="h-[22px] ml-[13px] sm:ml-0 !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
           >
-            47
+            {days}
           </Heading>
           <Text
             size="s"
@@ -41,7 +45,7 @@ export function HeaderTop() {
             as="h6"
             className="h-[22px] ml-[7px] sm:ml-0 !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
           >
-            06
+            {hours}
           </Heading>
           <Text
             size="s"
@@ -55,7 +59,7 @@ export function HeaderTop() {
             as="h6"
             className="h-[22px] ml-[7px] sm:ml-0 !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
           >
-            59
+            {minutes}
           </Heading>
           <Text
             size="s"
@@ -69,7 +73,7 @@ export function HeaderTop() {
             as="h6"
             className="h-[22px] ml-[7px] sm:ml-0 !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
           >
-            59
+            {seconds}
           </Heading>
           <Text
             size="s"

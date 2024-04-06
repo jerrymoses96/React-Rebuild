@@ -1,7 +1,7 @@
 import React from "react";
-import { Heading, Img, Input, Text } from "../..";
-import { CloseSVG } from "../../../assets/images";
-import "../../../styles/index.css";
+import { Heading, Img, Input, Text } from "../../..";
+import { CloseSVG } from "../../../../assets/images";
+import "../../../../styles/index.css";
 
 export function HeaderBottom(props) {
   return (

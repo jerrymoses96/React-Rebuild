@@ -1,9 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Button, Heading, Img, Input, RatingBar, Slider, Text } from "../..";
-import { HeaderMid } from "./HeaderMid";
-import { HeaderTop } from "./HeaderTop";
-import { HeaderBottom } from "./HeaderBottom";
+import { Header } from "./Header/Header";
+import { Slider2 } from "./Slider/Slider2";
 
 export default function HomeThreePage() {
   const [sliderState, setSliderState] = React.useState(0);
@@ -22,195 +21,26 @@ export default function HomeThreePage() {
         />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full bg-white-A700">
-        <header className="flex flex-col items-center justify-center w-full">
-          {/* Headertop  */}
-
-          <HeaderTop />
-          <div className="flex flex-col items-center justify-start w-full border-gray-200 border-b border-solid">
-            <HeaderMid />
-            <HeaderBottom
-              searchBarValue1={searchBarValue1}
-              setSearchBarValue1={setSearchBarValue1}
-            />
-
-            <div className="flex flex-row md:flex-col justify-between w-full md:gap-10 bg-white-A700">
-              <div className="flex flex-row md:flex-col justify-center items-center ml-[279px] md:gap-5 md:ml-5">
-                <a href="#">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Home
-                  </Heading>
-                </a>
-                <Img
-                  src="images/img_arrow_up.svg"
-                  alt="arrowup_five"
-                  className="h-[48px] ml-1.5 md:ml-0"
-                />
-                <a href="#" className="ml-[25px] md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Shop
-                  </Heading>
-                </a>
-                <Img
-                  src="images/img_arrow_up.svg"
-                  alt="arrowup_seven"
-                  className="h-[48px] ml-1.5 md:ml-0"
-                />
-                <a href="#" className="ml-[25px] md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Fruits & Vegetables
-                  </Heading>
-                </a>
-                <a href="#" className="ml-6 md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Beverages
-                  </Heading>
-                </a>
-                <a href="#" className="ml-6 md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Blog
-                  </Heading>
-                </a>
-                <a href="#" className="ml-6 md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Contact
-                  </Heading>
-                </a>
-              </div>
-              <div className="flex flex-row md:flex-col justify-center items-center mr-[279px] md:gap-5 md:mr-5">
-                <a href="#">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-black-900 tracking-[-0.30px]"
-                  >
-                    Trending Products
-                  </Heading>
-                </a>
-                <Img
-                  src="images/img_arrow_up.svg"
-                  alt="arrowup_nine"
-                  className="h-[48px] ml-[9px] md:ml-0"
-                />
-                <a href="#" className="ml-[25px] md:ml-0 sm:ml-5">
-                  <Heading
-                    size="xl"
-                    as="p"
-                    className="!text-red-700 tracking-[-0.30px]"
-                  >
-                    Almost Finished
-                  </Heading>
-                </a>
-                <a
-                  href="#"
-                  className="ml-[7px] p-1 md:ml-0 bg-gradient5 rounded"
-                >
-                  <Heading
-                    size="xs"
-                    as="p"
-                    className="!text-white-A700 tracking-[-0.30px] text-center !font-bold"
-                  >
-                    SALE
-                  </Heading>
-                </a>
-                <Img
-                  src="images/img_arrow_up_red_700.svg"
-                  alt="arrowup_eleven"
-                  className="h-[48px] ml-2.5 md:ml-0"
-                />
-              </div>
-            </div>
-          </div>
-        </header>
+        {/* header  */}
+        <Header
+          searchBarValue1={searchBarValue1}
+          setSearchBarValue1={setSearchBarValue1}
+        />
         <div className="flex flex-col items-start justify-start w-full">
           <div className="flex flex-row justify-end w-full py-3.5 mx-auto md:px-5 max-w-[10689px]">
             <div className="flex flex-col items-center justify-start w-full mt-[9px] gap-2">
-              <div className="flex flex-row md:flex-col justify-between items-center w-full pr-[280px] md:gap-10 md:pr-5">
-                <div className="flex flex-row justify-start items-center h-[20px] w-[21px] gap-[3px]">
-                  <div className="flex flex-col items-center justify-start w-[43%]">
-                    <div className="flex flex-col items-center justify-start w-[78%] md:w-full">
-                      <Text
-                        size="2xl"
-                        as="p"
-                        className="!text-black-900 tracking-[-0.32px] !font-normal"
-                      >
-                        1
-                      </Text>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center justify-start w-[43%]">
-                    <div className="flex flex-col items-center justify-start w-full">
-                      <Text
-                        size="2xl"
-                        as="p"
-                        className="!text-black-900 tracking-[-0.32px] !font-normal"
-                      >
-                        2
-                      </Text>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-row justify-center w-[83%] md:w-full mb-1">
-                  <div className="flex flex-col items-center justify-start w-full">
-                    <Slider
-                      autoPlay
-                      autoPlayInterval={2000}
-                      responsive={{
-                        0: { items: 1 },
-                        550: { items: 1 },
-                        1050: { items: 2 },
-                      }}
-                      disableDotsControls
-                      activeIndex={sliderState1}
-                      onSlideChanged={(e) => {
-                        setSliderState1(e?.item);
-                      }}
-                      ref={sliderRef1}
-                      className="w-full"
-                      items={[...Array(6)].map(() => (
-                        <React.Fragment key={Math.random()}>
-                          <Img
-                            src="images/img_slider_03_jpg.png"
-                            alt="slider03jpg_one"
-                            className="md:h-auto mx-auto object-cover rounded-md"
-                          />
-                        </React.Fragment>
-                      ))}
-                    />
-                    <div className="flex flex-row justify-start w-[3%] md:w-full mt-[-10px] gap-[5px] p-[7px] bg-white-A700 rounded-[10px]">
-                      <div className="h-[7px] w-[7px] bg-deep_purple-600 rounded-[3px]" />
-                      <div className="h-[7px] w-[7px] bg-gray-200 rounded-[3px]" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[71%] md:w-full">
+              {/* slider  */}
+              <Slider2
+                sliderState1={sliderState1}
+                setSliderState1={setSliderState1}
+                sliderRef1={sliderRef1}
+              />
+
+              <div className="flex flex-col items-center justify-start wrapper md:w-full">
+              {/* top categories  */}
                 <div className="flex flex-col items-center justify-start w-full gap-5">
                   <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
-                    <div className="flex flex-row justify-start items-center gap-[15px]">
+                    <div className="flex flex-row justify-start items-baseline gap-[15px]">
                       <Heading
                         size="3xl"
                         as="h3"
@@ -238,7 +68,7 @@ export default function HomeThreePage() {
                       View All
                     </Button>
                   </div>
-                  <div className="flex flex-row md:flex-col w-full gap-3.5 px-[13px] border-gray-200 border border-solid rounded-lg">
+                  <div className="flex flex-row md:flex-col w-full  gap-3.5 px-[13px] border-gray-200 border border-solid rounded-lg">
                     <div className="flex flex-col items-center justify-start w-[11%] md:w-full">
                       <div className="flex flex-row justify-start items-start w-full gap-[15px]">
                         <div className="flex flex-col items-center justify-start w-[89%] mt-[15px] gap-1">

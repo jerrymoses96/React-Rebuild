@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, RatingBar } from "../..";
-import "../../../styles/index.css"
+import { Text, RatingBar } from "../../..";
+import "../../../../styles/index.css";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export function HeaderMid() {
