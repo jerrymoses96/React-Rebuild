@@ -50,3 +50,11 @@ input:focus {
   margin: 0 auto;
   max-width: 1280px;
 }
+.banner{
+  background-image: url("../../public/images/img_promo_png.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 300px;
+  transform: scale(1.5);
+}
