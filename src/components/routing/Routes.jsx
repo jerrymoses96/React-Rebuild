@@ -2,7 +2,7 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import Home from "components/screens/Home";
 import NotFound from "components/screens/NotFound";
-import HomeThree from "components/screens/HomeThree/HomeThreePage";
+import HomeThree from "components/screens/HomeThree/index";
 
 const ProjectRoutes = () => {
   let element = useRoutes([

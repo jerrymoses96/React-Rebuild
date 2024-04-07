@@ -1,0 +1,89 @@
+[
+    {
+        "id": 1,
+        "name": "100 Percent Apple Juice – 64 fl oz Bottle",
+        "price": 1.99,
+        "discount_price": 0.50,
+        "average_rating": 4.0,
+        "available":23,
+        "cold_sale": false,
+        "organic": true,
+        "discount": 75,
+        "image_url": "images/img_link_1_2_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 2,
+        "name": "Great Value Rising Crust Frozen Pizza, Supreme",
+        "price": 9.99,
+        "discount_price": 8.99,
+        "average_rating": 3.0,
+        "available":18,
+        "cold_sale": true,
+        "organic": false,
+        "discount": 11,
+        "image_url": "images/img_link_1_87_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 3,
+        "name": "Simply Orange Pulp Free Juice– 52 fl oz",
+        "price": 4.13,
+        "discount_price": 2.45,
+        "average_rating": 5.0,
+        "available":27,
+        "cold_sale": false,
+        "organic": false,
+        "discount": 41,
+        "image_url": "images/img_link_1_12_jpg.png"
+    
+        
+      },
+      {
+        "id": 4,
+        "name": "California Pizza Kitchen Margherita, Crispy Thin Crus…",
+        "price": 14.77,
+        "discount_price": 11.77,
+        "average_rating": 4.0,
+        "available":19,
+        "cold_sale": true,
+        "organic": false,
+        "discount": 21,
+        "image_url": "images/img_link_1_30_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 5,
+        "name": "Cantaloupe Melon Fresh Organic Cut",
+        "price": 2.98,
+        "discount_price": 1.25,
+        "average_rating": 5.0,
+        "available":16,
+        "cold_sale": false,
+        "organic": true,
+        "discount": 59,
+        "image_url": "images/img_link_1_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 6,
+        "name": "Angel Soft Toilet Paper, 9 Mega Rolls",
+        "price": 17.12,
+        "discount_price": 14.12,
+        "average_rating": 3.0,
+        "available":32,
+        "cold_sale": false,
+        "organic": false,
+        "discount": 18,
+        "image_url": "images/img_link_1_9_500x500_jpg.png"
+    
+        
+      }
+
+
+
+]

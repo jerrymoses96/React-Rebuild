@@ -5,6 +5,8 @@ import { Header } from "./Header/Header";
 import { Slider2 } from "./Slider/Slider2";
 import { Promo } from "./Promo";
 import { Categories } from "./Categories";
+import data from "../../../components/general/data.json";
+import ProductCard from "./ProductCard";
 
 export default function HomeThreePage() {
   const [sliderState, setSliderState] = React.useState(0);
@@ -12,6 +14,7 @@ export default function HomeThreePage() {
   const [sliderState1, setSliderState1] = React.useState(0);
   const sliderRef1 = React.useRef(null);
   const [searchBarValue1, setSearchBarValue1] = React.useState("");
+  console.log(data);
 
   return (
     <>
@@ -111,20 +114,26 @@ export default function HomeThreePage() {
                 </div>
                 {/* new produts slider  */}
 
-                <div>
-                  <div>
+                <div className="border border-[#E5E7EB] rounded-lg mt-5 w-full ">
+                  <div className="flex">
                     {/* product cards */}
-                    <div>
-                      <div>
-                        <img
-                          src="images/img_link_black_900_02.svg"
-                          alt="link_one"
+                    {data.map((item) => {
+                      return (
+                        <ProductCard
+                          key={item.id}
+                          id={item.id}
+                          name={item.name}
+                          price={item.price}
+                          discount_price={item.discount_price}
+                          average_rating={item.average_rating}
+                          available={item.available}
+                          cold_sale={item.cold_sale}
+                          organic={item.organic}
+                          discount={item.discount}
+                          image_url={item.image_url}
                         />
-                      </div>
-                      <div>
-                        <p>100 Percent Apple Juice – 64 fl oz Bottle</p>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
 
