@@ -105,7 +105,7 @@ export default function HomeThreePage() {
                         />
                       </div>
                       <div className="text-center">
-                        <p className="text-sm">Fruits & Vegetables</p>
+                        <p className="text-sm">Beverages</p>
                       </div>
                     </div>
 

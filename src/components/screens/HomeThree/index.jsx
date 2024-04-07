@@ -4,6 +4,7 @@ import { Button, Heading, Img, Input, RatingBar, Slider, Text } from "../..";
 import { Header } from "./Header/Header";
 import { Slider2 } from "./Slider/Slider2";
 import { Promo } from "./Promo";
+import { Categories } from "./Categories";
 
 export default function HomeThreePage() {
   const [sliderState, setSliderState] = React.useState(0);
@@ -72,127 +73,12 @@ export default function HomeThreePage() {
 
                   {/* categories rebuild */}
 
-                  <div className="border border-[#E5E7EB] rounded-lg flex">
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_fruits_vegetables_png.png"
-                          alt="fruits"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Fruits & Vegetables</p>
-                      </div>
-                    </div>
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_baby_care_png.png"
-                          alt="linkbabycare"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Baby & Pregnancy</p>
-                      </div>
-                    </div>
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_beverages_png.png"
-                          alt="linkbeverages"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Fruits & Vegetables</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_meat_fish_png.png"
-                          alt="linkmeatfish"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Meats & Seafood</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_organic_png.png"
-                          alt="linkorganic_one"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Biscuits & Snacks</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_bakery_png.png"
-                          alt="linkbakerypng"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Breads & Bakery</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_dairy_png.png"
-                          alt="linkdairypng"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Breakfast & Diary</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_frozen_foods_png.png"
-                          alt="linkfrozen_one"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Frozen Foods</p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 border-r border-[#E5E7EB]">
-                      <div>
-                        <Img
-                          src="images/img_link_grocery_png.png"
-                          alt="linkgrocery_one"
-                          className="w-[122px] object-cover"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm">Grocery & Staples</p>
-                      </div>
-                    </div>
-                  </div>
+                  <Categories />
                 </div>
 
                 {/* promo */}
-                
-                <Promo/>
+
+                <Promo />
 
                 <div className="flex flex-row sm:flex-col justify-between items-center w-full mt-[26px] sm:gap-10">
                   <div className="flex flex-row sm:flex-col justify-start items-center gap-[15px] sm:gap-5">
@@ -223,10 +109,30 @@ export default function HomeThreePage() {
                     View All
                   </Button>
                 </div>
+                {/* new produts slider  */}
+
+                <div>
+                  <div>
+                    {/* product cards */}
+                    <div>
+                      <div>
+                        <img
+                          src="images/img_link_black_900_02.svg"
+                          alt="link_one"
+                        />
+                      </div>
+                      <div>
+                        <p>100 Percent Apple Juice – 64 fl oz Bottle</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* new produts slider  */}
                 <div className="flex flex-row justify-center w-full mt-5">
                   <div className="h-[413px] w-full relative">
                     <Slider
-                      autoPlay
+                      autoPlay={false}
                       autoPlayInterval={2000}
                       responsive={{
                         0: { items: 1 },
@@ -1075,6 +981,9 @@ export default function HomeThreePage() {
                       </Button>
                     </div>
                   </div>
+
+                  {/* 3 images  */}
+
                   <div className="h-[220px] w-[32%] md:w-full relative">
                     <Img
                       src="images/img_banner_13_jpg.png"
