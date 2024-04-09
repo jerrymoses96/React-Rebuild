@@ -1,12 +1,11 @@
 import { Button, Img } from "../..";
 import renderStars from "../../helpers/RenderStars";
 
-const ProductCard = ({
+const ProductCard2 = ({
   id,
   name,
   price,
   discount_price,
-  available,
   cold_sale,
   organic,
   image_url,
@@ -14,7 +13,7 @@ const ProductCard = ({
   average_rating,
 }) => {
   return (
-    <div className="p-3 w-1/6 border-r border-[#E5E7EB]">
+    <div className="p-3 w-1/5 border-r border-[#E5E7EB]">
       <div>
         <Button
           color="red_700"
@@ -55,29 +54,21 @@ const ProductCard = ({
           {renderStars(average_rating)}
           <span className="text-[#9CA3AF] text-xs ml-1">{average_rating}</span>
         </div>
-        <p className="text-[#030712] text-sm font-medium mb-1 ">{name}</p>
-        <div className="flex items-center gap-1 pb-2 border-b border-[#E5E7EB] ">
+        <p className="text-[#030712] text-sm font-medium mb-1 h-[55px] ">
+          {name}
+        </p>
+        <div className="flex items-center gap-1 pb-2  ">
           <p className="text-[#DC2626] text-xl font-bold">${discount_price}</p>
           <p className="text-[#111827] text-sm font-normal line-through">
             ${price}
           </p>
         </div>
         <div>
-          <p className="text-[11px] text-[#9CA3AF] font-normal pt-2 mb-2">
-            This product is about to run out
-          </p>
-          <div class="w-full h-[5px] bg-gradient-to-r from-yellow-400 to-red-600"></div>
-
-          <p className="text-[12px] text-[#6B7280] font-normal">
-            available only:{" "}
-            <span className="text-base font-bold text-[#030712]">
-              {available}
-            </span>{" "}
-          </p>
+          <p className="text-[#16A34A] font-bold text-xs">IN STOCK</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductCard2;

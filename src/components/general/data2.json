@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "100 Percent Apple Juice – 64 fl oz Bottle",
+        "price": 1.99,
+        "discount_price": 0.50,
+        "average_rating": 4.0,
+        "available":23,
+        "cold_sale": false,
+        "organic": true,
+        "discount": 75,
+        "image_url": "images/img_link_1_2_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 2,
+        "name": "Cantaloupe Melon Fresh Organic Cut",
+        "price": 2.98,
+        "discount_price": 1.25,
+        "average_rating": 5.0,
+       
+        "cold_sale": false,
+        "organic": true,
+        "discount": 59,
+        "image_url": "images/img_link_1_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 3,
+        "name": "Vital Farms Pasture-Raised Garde A Large Eggs-12ct",
+        "price": 4.99,
+        "discount_price": 3.99,
+        "average_rating": 4.0,
+       
+        "cold_sale": false,
+        "organic": false,
+        "discount": 21,
+        "image_url": "images/img_link_1_37_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 4,
+        "name": "Tilamook Medium Cheddar Cheese Loaf-32oz",
+        "price": 7.99,
+        "discount_price": 6.99,
+        "average_rating": 4.0,
+        
+        "cold_sale": false,
+        "organic": false,
+        "discount": 13,
+        "image_url": "images/img_link_1_29_500x500_jpg.png"
+    
+        
+      },
+    
+      {
+        "id": 5,
+        "name": "Silk Dairy Free,Gluten Free,Vannila Almond Milk,64 fl... ",
+        "price": 5.60,
+        "discount_price": 4.60,
+        "average_rating": 3.0,
+
+        "cold_sale": false,
+        "organic": false,
+        "discount": 18,
+        "image_url": "images/img_link_1_9_500x500_jpg_158x158.png"
+    
+        
+      }
+
+
+
+]

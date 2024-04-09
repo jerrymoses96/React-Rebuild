@@ -15,7 +15,7 @@
       },
       {
         "id": 2,
-        "name": "Great Value Rising Crust Frozen Pizza, Supreme",
+        "name": "Great Value Rising Crust Frozen Pizza",
         "price": 9.99,
         "discount_price": 8.99,
         "average_rating": 3.0,
@@ -43,7 +43,7 @@
       },
       {
         "id": 4,
-        "name": "California Pizza Kitchen Margherita, Crispy Thin Crus…",
+        "name": "California Pizza Kitchen Margherita, Crispy Thin",
         "price": 14.77,
         "discount_price": 11.77,
         "average_rating": 4.0,
