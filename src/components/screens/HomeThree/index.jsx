@@ -1,16 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Img, Input, RatingBar, Slider, Text } from "../..";
-import { Header } from "./Header/Header";
-import { Slider2 } from "./Slider/Slider2";
-import { Promo } from "./Promo";
-import { Categories } from "./Categories";
+import { Button, Heading, Img, Input, RatingBar, Text } from "../..";
 import data from "../../../components/general/data.json";
 import data2 from "../../../components/general/data2.json";
-import ProductCard from "./ProductCard";
+import data3 from "../../../components/general/data3.json";
 import renderStars from "../../helpers/RenderStars";
 import { BannerImage1 } from "./BannerImage1";
+import { Categories } from "./Categories";
+import { Header } from "./Header/Header";
+import ProductCard from "./ProductCard";
+import ProductCard3 from "./ProductCard3";
 import ProductCard2 from "./Productcard2";
+import { Promo } from "./Promo";
+import { Slider2 } from "./Slider/Slider2";
 
 export default function HomeThreePage() {
   const [sliderState, setSliderState] = React.useState(0);
@@ -253,7 +255,6 @@ export default function HomeThreePage() {
                   </div>
                 </div>
 
-               
                 <div className="flex flex-row md:flex-col w-full mt-[27px] gap-[30px]">
                   <div className="h-[280px] w-[49%] md:w-full relative">
                     <Img
@@ -346,6 +347,7 @@ export default function HomeThreePage() {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex flex-col items-center justify-start w-full mt-[26px] gap-5">
                   <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
                     <div className="flex flex-row sm:flex-col justify-start items-center gap-[15px] sm:gap-5">
@@ -376,30 +378,24 @@ export default function HomeThreePage() {
                       View All
                     </Button>
                   </div>
-                  <div className="flex flex-row md:flex-col w-full gap-[15px] border-gray-200 border border-solid rounded-lg">
-                    <div className="h-[364px] w-[24%] md:w-full border-gray-200 border-r border-solid relative">
-                      <Img
-                        src="images/img_banner_16_jpg.png"
-                        alt="only_this_week"
-                        className="justify-center h-[364px] w-full sm:w-full left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
-                      />
-                      <div className="flex flex-col items-start justify-start w-[53%] left-[6%] top-[6%] m-auto absolute">
-                        <Text
-                          size="md"
-                          as="p"
-                          className="!text-orange-900 tracking-[-0.24px] !font-medium"
-                        >
+
+                  {/* featured products  */}
+
+                  <div className="border border-[#E5E7EB] rounded-lg flex justify-start">
+                    {/* image div  */}
+
+                    <div className="h-[364px] w-80 rounded-lg border-gray-200 border-r border-solid relative">
+                      <div className="absolute top-5 left-5 z-10 flex flex-col  gap-2">
+                        <p className=" text-red-700 tracking-[-0.24px] ">
                           Only This Week
-                        </Text>
-                        <Heading as="h5" className="mt-2 tracking-[-0.88px]">
-                          A smart store for
-                        </Heading>
-                        <Heading as="h5" className="mt-px tracking-[-0.88px]">
-                          every people
-                        </Heading>
-                        <Text as="p" className="mt-[7px] tracking-[-0.32px]">
+                        </p>
+                        <p className="text-black-900 tracking-[-0.24px] text-xl font-bold">
+                          A smart store for <br /> every people
+                        </p>
+                        <p className="text-[#6B7280 tracking-[-0.24px text-xs]">
                           Feed your family the best
-                        </Text>
+                        </p>
+
                         <Button
                           size="lg"
                           rightIcon={
@@ -408,372 +404,41 @@ export default function HomeThreePage() {
                               alt="i.klb-icon-move-right"
                             />
                           }
-                          className="mt-[17px] gap-[5px] !text-gray-900_02 tracking-[-0.24px] font-bold border-gray-200 border border-solid min-w-[108px] rounded-[17px] sm:min-w-full"
+                          className="mt-[10px] gap-[5px] !text-gray-900_02 tracking-[-0.24px] font-bold border-gray-200 border border-solid w-[110px] rounded-[17px] "
                         >
                           Shop Now
                         </Button>
                       </div>
-                    </div>
-                    <Button
-                      color="red_700"
-                      shape="round"
-                      className="mt-6 mb-[316px] md:mt-0 !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold min-w-[38px]"
-                    >
-                      75%
-                    </Button>
-                    <Button
-                      variant="gradient"
-                      shape="round"
-                      color="lime_300_green_200"
-                      leftIcon={<Img src="images/img_svg.svg" alt="SVG" />}
-                      className="mt-[221px] mb-[119px] gap-[5px] md:mt-0 !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold min-w-[80px]"
-                    >
-                      Organic
-                    </Button>
-                    <RatingBar
-                      value={2}
-                      isEditable={true}
-                      size={11}
-                      starCount={2}
-                      className="flex justify-between w-[66px] mt-64 mb-[97px] md:mt-0"
-                    />
-                    <Heading
-                      as="h5"
-                      className="mt-[323px] mb-3.5 md:mt-0 !text-red-700 tracking-[-0.44px]"
-                    >
-                      $0.50
-                    </Heading>
-                    <a
-                      href="#"
-                      className="w-[15%] mt-[275px] mb-[55px] md:mt-0"
-                    >
-                      <Text
-                        as="p"
-                        className="!text-black-900 tracking-[-0.26px] !font-medium"
-                      >
-                        <>
-                          100 Percent Apple Juice – 64 fl oz
-                          <br />
-                          Bottle
-                        </>
-                      </Text>
-                    </a>
-                    <div className="h-[210px] w-[210px] mt-[25px] mb-[129px] md:mt-0 relative">
                       <Img
-                        src="images/img_link_1_2_500x500_jpg.png"
-                        alt="link1two_one"
-                        className="justify-center h-[210px] w-[210px] left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
-                      />
-                      <Img
-                        src="images/img_link_black_900_02.svg"
-                        alt="link_one"
-                        className="h-[14px] w-[12%] bottom-[12%] right-[2%] m-auto rounded-[50%] absolute"
+                        src="images/img_banner_16_jpg.png"
+                        alt="only_this_week"
+                        className="justify-center h-[364px] rounded-lg w-full sm:w-full left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
                       />
                     </div>
-                    <Text
-                      size="2xl"
-                      as="p"
-                      className="mt-[329px] mb-[15px] md:mt-0 !text-gray-900 tracking-[-0.44px] !font-barlow !text-[16.1px] line-through"
-                    >
-                      $1.99
-                    </Text>
-                    <Text
-                      size="md"
-                      as="p"
-                      className="mt-[253px] mb-24 md:mt-0 tracking-[-0.32px]"
-                    >
-                      3
-                    </Text>
-                    <Button
-                      size="md"
-                      shape="circle"
-                      className="w-[3%] mt-5 mb-[312px] md:mt-0"
-                    >
-                      <Img src="images/img_link.svg" />
-                    </Button>
-                    <Button
-                      color="deep_purple_600"
-                      size="md"
-                      shape="circle"
-                      className="w-[3%] mt-[219px] mb-[113px] md:mt-0"
-                    >
-                      <Img src="images/img_link_add_to_cart.svg" />
-                    </Button>
-                    <div className="flex flex-col items-center justify-start w-[20%] md:w-full mb-0.5">
-                      <div className="flex flex-row justify-start items-center w-full gap-3.5">
-                        <div className="h-[361px] w-px bg-gray-200" />
-                        <div className="flex flex-col items-center justify-start w-[89%] gap-0.5">
-                          <div className="flex flex-col items-center justify-start h-[231px] w-[230px] md:w-full">
-                            <div className="flex flex-row justify-center items-start h-[231px] w-[230px] md:w-full">
-                              <Button
-                                color="red_700"
-                                shape="round"
-                                className="mt-1 !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold z-[1] min-w-[37px]"
-                              >
-                                41%
-                              </Button>
-                              <div className="flex flex-row justify-center items-start w-[96%] ml-[-27px]">
-                                <Img
-                                  src="images/img_link_1_12_jpg.png"
-                                  alt="link112jpg_one"
-                                  className="w-[210px] md:h-auto mt-[5px] z-[1] object-cover"
-                                />
-                                <div className="flex flex-col items-end justify-start w-[44%] ml-[-86px] gap-[167px]">
-                                  <Button
-                                    size="md"
-                                    shape="circle"
-                                    className="w-[32px] mr-[5px]"
-                                  >
-                                    <Img src="images/img_link.svg" />
-                                  </Button>
-                                  <div className="flex flex-row justify-end items-center w-full border-deep_purple-600 border border-solid rounded-[16px]">
-                                    <Img
-                                      src="images/img_div_quantity_button.svg"
-                                      alt="divquantity_one"
-                                      className="h-[32px] w-[32px]"
-                                    />
-                                    <div className="flex flex-col items-center justify-start w-[34%]">
-                                      <div className="flex flex-col items-center justify-start w-full py-[5px]">
-                                        <Button
-                                          size="lg"
-                                          shape="square"
-                                          className="tracking-[-0.28px] font-medium min-w-[32px] sm:min-w-full"
-                                        >
-                                          1
-                                        </Button>
-                                      </div>
-                                    </div>
-                                    <Button
-                                      color="deep_purple_600"
-                                      size="md"
-                                      shape="square"
-                                      className="w-[32px]"
-                                    >
-                                      <Img src="images/img_link_add_to_cart.svg" />
-                                    </Button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="flex flex-row justify-start w-full">
-                            <div className="flex flex-col items-start justify-start w-[96%] gap-2.5">
-                              <div className="flex flex-row justify-start items-center gap-2">
-                                <RatingBar
-                                  value={2}
-                                  isEditable={true}
-                                  size={11}
-                                  starCount={2}
-                                  className="flex justify-between w-[66px]"
-                                />
-                                <Text
-                                  size="md"
-                                  as="p"
-                                  className="tracking-[-0.32px]"
-                                >
-                                  2
-                                </Text>
-                              </div>
-                              <a href="#">
-                                <Text
-                                  as="p"
-                                  className="!text-black-900 tracking-[-0.26px] !font-medium"
-                                >
-                                  <>
-                                    Simply Orange Pulp Free Juice – 52 fl
-                                    <br />
-                                    oz
-                                  </>
-                                </Text>
-                              </a>
-                              <div className="flex flex-row justify-start items-center gap-1.5">
-                                <Heading
-                                  as="h5"
-                                  className="!text-red-700 tracking-[-0.44px]"
-                                >
-                                  $2.45
-                                </Heading>
-                                <Text
-                                  size="2xl"
-                                  as="p"
-                                  className="!text-gray-900 tracking-[-0.44px] !font-barlow !text-[16.1px] line-through"
-                                >
-                                  $4.13
-                                </Text>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="h-[361px] w-px bg-gray-200" />
-                      </div>
-                    </div>
-                    <Button
-                      color="red_700"
-                      shape="round"
-                      className="mt-6 mb-[316px] md:mt-0 !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold min-w-[39px]"
-                    >
-                      45%
-                    </Button>
-                    <div className="flex flex-row justify-start w-[17%] md:w-full mt-[253px] mb-3.5 md:mt-0">
-                      <div className="flex flex-col items-start justify-start w-[90%] gap-2.5">
-                        <div className="flex flex-row justify-start items-center gap-2">
-                          <RatingBar
-                            value={2}
-                            isEditable={true}
-                            size={11}
-                            starCount={2}
-                            className="flex justify-between w-[66px]"
+                    <div className="flex flex-row md:flex-col w-full">
+                      {data3.map((item) => {
+                        return (
+                          <ProductCard3
+                            key={item.id}
+                            id={item.id}
+                            name={item.name}
+                            price={item.price}
+                            discount_price={item.discount_price}
+                            average_rating={item.average_rating}
+                            cold_sale={item.cold_sale}
+                            organic={item.organic}
+                            discount={item.discount}
+                            image_url={item.image_url}
                           />
-                          <Text size="md" as="p" className="tracking-[-0.32px]">
-                            3
-                          </Text>
-                        </div>
-                        <a href="#">
-                          <Text
-                            as="p"
-                            className="!text-black-900 tracking-[-0.26px] !font-medium"
-                          >
-                            <>
-                              Vitaminwater zero sugar squeezed
-                              <br />
-                              electrolyte enhanced water,…
-                            </>
-                          </Text>
-                        </a>
-                        <div className="flex flex-row justify-start items-center gap-1.5">
-                          <Heading
-                            as="h5"
-                            className="!text-red-700 tracking-[-0.44px]"
-                          >
-                            $4.99
-                          </Heading>
-                          <Text
-                            size="2xl"
-                            as="p"
-                            className="!text-gray-900 tracking-[-0.44px] !font-barlow !text-[16.1px] line-through"
-                          >
-                            $8.99
-                          </Text>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="h-[210px] w-[210px] mt-[25px] mb-[129px] md:mt-0 relative">
-                      <Img
-                        src="images/img_link_1_38_500x500_jpg.png"
-                        alt="link1thirtyeigh"
-                        className="justify-center h-[210px] w-[210px] left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
-                      />
-                      <div className="flex w-[32px] h-[14px] sm:w-full bottom-[12%] right-[2%] m-auto absolute" />
-                    </div>
-                    <Button
-                      size="md"
-                      shape="circle"
-                      className="w-[3%] mt-5 mb-[312px] md:mt-0"
-                    >
-                      <Img src="images/img_link.svg" />
-                    </Button>
-                    <Button
-                      color="deep_purple_600"
-                      size="md"
-                      shape="circle"
-                      className="w-[3%] mt-[219px] mb-[113px] md:mt-0"
-                    >
-                      <Img src="images/img_link_add_to_cart.svg" />
-                    </Button>
-                    <div className="flex flex-col items-center justify-start w-[20%] md:w-full mb-0.5">
-                      <div className="flex flex-row justify-start items-center w-[95%] md:w-full gap-3.5">
-                        <div className="h-[361px] w-px bg-gray-200" />
-                        <div className="flex flex-col items-center justify-start w-[94%] gap-0.5">
-                          <div className="flex flex-col items-center justify-start h-[231px] w-[230px] md:w-full">
-                            <div className="flex flex-row justify-center items-start h-[231px] w-[230px] md:w-full">
-                              <Button
-                                color="red_700"
-                                shape="round"
-                                className="mt-1 !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold z-[1] min-w-[37px]"
-                              >
-                                16%
-                              </Button>
-                              <div className="flex flex-row justify-center items-start w-[96%] ml-[-27px]">
-                                <div className="h-[210px] w-[210px] mt-[5px] z-[1] relative">
-                                  <Img
-                                    src="images/img_link_1_3_500x500_jpg.png"
-                                    alt="link1three_one"
-                                    className="justify-center h-[210px] w-[210px] left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
-                                  />
-                                  <div className="flex w-[32px] h-[14px] sm:w-full bottom-[12%] right-[2%] m-auto absolute" />
-                                </div>
-                                <div className="flex flex-col items-start justify-start w-[17%] ml-[-27px] gap-[167px]">
-                                  <Button
-                                    size="md"
-                                    shape="circle"
-                                    className="w-[32px]"
-                                  >
-                                    <Img src="images/img_link.svg" />
-                                  </Button>
-                                  <Button
-                                    color="deep_purple_600"
-                                    size="md"
-                                    shape="circle"
-                                    className="w-[32px] ml-[5px] md:ml-0"
-                                  >
-                                    <Img src="images/img_link_add_to_cart.svg" />
-                                  </Button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="flex flex-row justify-center w-full">
-                            <div className="flex flex-col items-start justify-start w-[99%] gap-2.5">
-                              <div className="flex flex-row justify-start items-center gap-2">
-                                <RatingBar
-                                  value={2}
-                                  isEditable={true}
-                                  size={11}
-                                  starCount={2}
-                                  className="flex justify-between w-[66px]"
-                                />
-                                <Text
-                                  size="md"
-                                  as="p"
-                                  className="tracking-[-0.32px]"
-                                >
-                                  2
-                                </Text>
-                              </div>
-                              <a href="#">
-                                <Text
-                                  as="p"
-                                  className="!text-black-900 tracking-[-0.26px] !font-medium"
-                                >
-                                  <>
-                                    A&W Caffeine-Free, Low Sodium Root
-                                    <br />
-                                    Beer Soda Pop, 2 Liter Bottles
-                                  </>
-                                </Text>
-                              </a>
-                              <div className="flex flex-row justify-start items-center gap-1.5">
-                                <Heading
-                                  as="h5"
-                                  className="!text-red-700 tracking-[-0.44px]"
-                                >
-                                  $9.50
-                                </Heading>
-                                <Text
-                                  size="2xl"
-                                  as="p"
-                                  className="!text-gray-900 tracking-[-0.44px] !font-barlow !text-[16.1px] line-through"
-                                >
-                                  $11.20
-                                </Text>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
                     </div>
                   </div>
+                
                 </div>
+
+                {/* 3 banner images  */}
+
                 <div className="flex flex-row md:flex-col w-full mt-9 gap-[30px]">
                   <div className="h-[220px] w-[32%] md:w-full relative">
                     <Img

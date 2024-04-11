@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "100 Percent Apple Juice – 64 fl oz Bottle",
+        "price": 1.99,
+        "discount_price": 0.50,
+        "average_rating": 4.0,
+        "available":23,
+        "cold_sale": false,
+        "organic": true,
+        "discount": 75,
+        "image_url": "images/img_link_1_2_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 2,
+        "name": "Simply Orange Pulp Free Juice-52fl oz",
+        "price": 4.13,
+        "discount_price": 2.45,
+        "average_rating": 5.0,
+       
+        "cold_sale": false,
+        "organic": false,
+        "discount": 41,
+        "image_url": "images/img_link_1_12_jpg.png"
+    
+        
+      },
+      {
+        "id": 3,
+        "name": "Vital Farms Pasture-Raised Garde A Large Eggs-12ct",
+        "price": 8.99,
+        "discount_price": 4.99,
+        "average_rating": 3.0,
+       
+        "cold_sale": false,
+        "organic": false,
+        "discount": 45,
+        "image_url": "images/img_link_1_38_500x500_jpg.png"
+    
+        
+      },
+      {
+        "id": 4,
+        "name": "Tilamook Medium Cheddar Cheese Loaf-32oz",
+        "price": 11.20,
+        "discount_price": 9.50,
+        "average_rating": 4.0,
+        
+        "cold_sale": false,
+        "organic": false,
+        "discount": 16,
+        "image_url": "images/img_link_1_3_500x500_jpg.png"
+    
+        
+      }
+    
+    
+
+
+
+]
