@@ -434,7 +434,6 @@ export default function HomeThreePage() {
                       })}
                     </div>
                   </div>
-                
                 </div>
 
                 {/* 3 banner images  */}
@@ -446,7 +445,7 @@ export default function HomeThreePage() {
                       alt="only_this_week"
                       className="justify-center h-[220px] w-full sm:w-full left-0 bottom-0 right-0 top-0 m-auto object-cover absolute rounded-md"
                     />
-                    <div className="flex flex-col items-start justify-start w-[37%] h-max left-[5%] bottom-0 top-0 m-auto absolute">
+                    <div className="flex flex-col items-start justify-start w-[38%] h-max left-[5%] bottom-0 top-0 m-auto absolute">
                       <Text
                         size="md"
                         as="p"
