@@ -551,6 +551,9 @@ export default function HomeThreePage() {
                     </div>
                   </div>
                 </div>
+
+                {/* deals of the day  */}
+
                 <div className="flex flex-row sm:flex-col justify-between items-center w-full mt-[26px] sm:gap-10">
                   <div className="flex flex-row sm:flex-col justify-start items-center gap-[15px] sm:gap-5">
                     <Heading
@@ -607,12 +610,11 @@ export default function HomeThreePage() {
                             </Button>
                             <Button
                               variant="gradient"
-                              shape="round"
                               color="lime_300_green_200"
                               leftIcon={
                                 <Img src="images/img_svg.svg" alt="SVG" />
                               }
-                              className="gap-[5px] bottom-0 left-0 m-auto !rounded-tr-[50%] !rounded-br-[50%] tracking-[-0.32px] uppercase font-extrabold min-w-[80px] absolute"
+                              className="gap-[5px] bottom-[-5px] left-0 m-auto rounded-2xl   tracking-[-0.32px] uppercase font-extrabold min-w-[80px] absolute"
                             >
                               Organic
                             </Button>
@@ -639,13 +641,8 @@ export default function HomeThreePage() {
                               </Text>
                             </a>
                             <div className="flex flex-row justify-start items-center mt-1.5 gap-[7px]">
-                              <RatingBar
-                                value={2}
-                                isEditable={true}
-                                size={11}
-                                starCount={2}
-                                className="flex justify-between w-[66px]"
-                              />
+                              {renderStars(3)}
+
                               <Text
                                 size="md"
                                 as="p"
@@ -761,7 +758,6 @@ export default function HomeThreePage() {
                             </Button>
                             <Button
                               variant="gradient"
-                              shape="round"
                               color="light_blue_100_light_blue_50"
                               leftIcon={
                                 <Img
@@ -769,7 +765,7 @@ export default function HomeThreePage() {
                                   alt="SVG"
                                 />
                               }
-                              className="gap-[5px] bottom-0 left-0 m-auto tracking-[-0.32px] uppercase font-extrabold min-w-[88px] absolute"
+                              className="gap-[5px] bottom-0 left-0 rounded-2xl m-auto tracking-[-0.32px] uppercase font-extrabold min-w-[88px] absolute"
                             >
                               Cold Sale
                             </Button>
@@ -798,13 +794,7 @@ export default function HomeThreePage() {
                                   </Text>
                                 </a>
                                 <div className="flex flex-row justify-start items-center gap-[7px]">
-                                  <RatingBar
-                                    value={2}
-                                    isEditable={true}
-                                    size={11}
-                                    starCount={2}
-                                    className="flex justify-between w-[66px]"
-                                  />
+                                  {renderStars(3)}
                                   <Text
                                     size="md"
                                     as="p"
@@ -914,12 +904,11 @@ export default function HomeThreePage() {
                         </Button>
                         <Button
                           variant="gradient"
-                          shape="round"
                           color="light_blue_100_light_blue_50"
                           leftIcon={
                             <Img src="images/img_svg_cyan_700.svg" alt="SVG" />
                           }
-                          className="gap-[5px] bottom-0 left-0 m-auto tracking-[-0.32px] uppercase font-extrabold min-w-[88px] absolute"
+                          className="gap-[5px] bottom-0 left-0 rounded-2xl m-auto tracking-[-0.32px] uppercase font-extrabold min-w-[88px] absolute"
                         >
                           Cold Sale
                         </Button>
@@ -934,13 +923,7 @@ export default function HomeThreePage() {
                       <div className="flex flex-col items-center justify-start w-[41%] md:w-full">
                         <div className="flex flex-col items-start justify-start w-full">
                           <div className="flex flex-row justify-start items-center gap-[7px]">
-                            <RatingBar
-                              value={2}
-                              isEditable={true}
-                              size={11}
-                              starCount={2}
-                              className="flex justify-between w-[66px]"
-                            />
+                            {renderStars(3)}
                             <Text
                               size="md"
                               as="p"
@@ -983,19 +966,13 @@ export default function HomeThreePage() {
                           </div>
                           <Text
                             as="p"
-                            className="w-[97%] mt-[5px] !text-blue_gray-700 tracking-[-0.32px] !leading-[19px]"
+                            className="  mt-[5px] !text-blue_gray-700 tracking-[-0.32px] !leading-[19px]"
                           >
                             <>
                               Vivamus adipiscing nisl ut dolor dignissim semper.
-                              Nulla
-                              <br />
-                              luctus malesuada tincidunt. Class aptent taciti
-                              sociosqu
-                              <br />
-                              ad litora torquent Vivamus adipiscing nisl ut
-                              dolor
-                              <br />
-                              dignissim semper.
+                              Nulla luctus malesuada tincidunt. Class aptent
+                              taciti sociosqu ad litora torquent Vivamus
+                              adipiscing nisl ut dolor dignissim semper.
                             </>
                           </Text>
                           <div className="flex flex-row justify-start w-full mt-[19px] border-gray-200 border-t border-solid">
@@ -1007,6 +984,7 @@ export default function HomeThreePage() {
                               >
                                 This product is about to run out
                               </Text>
+                              <div class="w-full h-[5px] bg-gradient-to-r from-yellow-400 to-red-600"></div>
                               <div className="flex flex-row justify-start bg-gray-200 rounded-[3px]">
                                 <div className="h-[6px] w-full bg-gradient4 rounded-[3px]" />
                               </div>
@@ -1043,6 +1021,7 @@ export default function HomeThreePage() {
                     </div>
                   </div>
                 </div>
+                {/* deals of the day end  */}
                 <div className="flex flex-row justify-center w-full mt-10">
                   <div className="flex flex-row md:flex-col justify-start items-center w-full gap-[19px] md:gap-5">
                     <div className="flex flex-row md:flex-col w-[82%] md:w-full gap-9">
@@ -1066,9 +1045,8 @@ export default function HomeThreePage() {
                               className="tracking-[-0.32px] !leading-[18px]"
                             >
                               <>
-                                Tasigförsamhet beteendedesign. Mobile
-                                <br />
-                                checkout. Ylig kärrtorpa.
+                                Tasigförsamhet beteendedesign. Mobile checkout.
+                                Ylig kärrtorpa.
                               </>
                             </Text>
                           </div>
@@ -1165,13 +1143,13 @@ export default function HomeThreePage() {
           <div className="flex flex-row justify-center w-full mx-auto max-w-[1360px]">
             <div className="flex flex-col items-center justify-center w-full">
               <div className="flex flex-row md:flex-col justify-between items-start w-full md:gap-10">
-                <div className="flex flex-col items-center justify-start w-[22%] md:w-full gap-[9px]">
+                <div className="flex flex-col items-center justify-start w-[23%] md:w-full gap-[9px]">
                   <Heading size="4xl" as="h5" className="tracking-[-0.40px]">
                     Join our newsletter for £10 offs
                   </Heading>
                   <Text as="p" className="tracking-[-0.32px] !leading-[19px]">
                     <>
-                      Register now to get latest updates on promotions &<br />
+                      Register now to get latest updates on promotions &
                       coupons.Don’t worry, we not spam!
                     </>
                   </Text>
@@ -1210,7 +1188,7 @@ export default function HomeThreePage() {
               </div>
               <div className="flex flex-row md:flex-col justify-start w-full mt-[55px] gap-[30px] py-[50px] md:gap-5 md:py-5 border-blue_gray-100 border-t border-solid">
                 <div className="flex flex-row justify-start w-[24%] md:w-full">
-                  <div className="flex flex-col items-start justify-start w-[80%] mb-[26px]">
+                  <div className="flex flex-col items-start justify-start w-[100%] mb-[26px]">
                     <Heading size="lg" as="p" className="tracking-[-0.28px]">
                       Do You Need Help ?
                     </Heading>
@@ -1219,9 +1197,8 @@ export default function HomeThreePage() {
                       className="mt-5 tracking-[-0.32px] !leading-[19px]"
                     >
                       <>
-                        Autoseligen syr. Nek diarask fröbomba. Nör
-                        <br />
-                        antipol kynoda nynat. Pressa fåmoska.
+                        Autoseligen syr. Nek diarask fröbomba. Nör antipol
+                        kynoda nynat. Pressa fåmoska.
                       </>
                     </Text>
                     <div className="flex flex-row justify-start items-center w-[79%] md:w-full mt-8 gap-[22px]">
