@@ -1,9 +1,23 @@
 module.exports = {
   mode: "jit",
-  content: ["./src/**/**/*.{js,ts,jsx,tsx,html,mdx}", "./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
+  content: [
+    "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
+  ],
   darkMode: "class",
   theme: {
-    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    screens: {
+      xxl: { max: "1439px" }, // Targets screens up to 1439px (exclusive)
+      xl: { max: "1279px" }, // Targets screens up to 1279px (exclusive)
+      lg: { max: "1079px" }, // Targets screens up to 1079px (exclusive)
+      md: { max: "979px" }, // Targets screens up to 979px (exclusive)
+      sm: { max: "767px" }, // Targets screens up to 767px (exclusive)
+      tablet: { max: "639px" }, // Ensures media query applies up to 639px
+      mobileL: { max: "539px" }, // Ensures media query applies up to 539px
+      mobileM: { max: "479px" }, // Ensures media query applies up to 479px
+      mobileS: { max: "359px" }, // Ensures media query applies up to 359px
+      xs: "320px", // Regular min-width for xs breakpoint (included for completeness)
+    },
     extend: {
       colors: {
         white: { A700: "#ffffff", A700_99: "#ffffff99" },
@@ -16,8 +30,18 @@ module.exports = {
           "900_90": "#11182790",
         },
         deep_purple: { 600: "#634c9f" },
-        blue_gray: { 100: "#d1d5db", 300: "#9ca3af", 700: "#4b5563", 800: "#39245f" },
-        black: { 900: "#030712", "900_99": "#03071299", "900_87": "#03071287", "900_01": "#020617" },
+        blue_gray: {
+          100: "#d1d5db",
+          300: "#9ca3af",
+          700: "#4b5563",
+          800: "#39245f",
+        },
+        black: {
+          900: "#030712",
+          "900_99": "#03071299",
+          "900_87": "#03071287",
+          "900_01": "#020617",
+        },
         red: { 50: "#fef2f2", 700: "#dc2626", 900: "#7c2d12" },
         orange: { 50: "#ffedd5", 900: "#ea580c", "900_66": "#ea580c66" },
         yellow: { 50: "#fff7ed" },
