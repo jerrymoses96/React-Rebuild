@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 export function NewProductSlider() {
   return (
     <div className="border border-[#E5E7EB] rounded-lg mt-5 w-full ">
-      <div className="flex">
+      <div className="flex flex-wrap justify-center">
         {/* product cards */}
         {data.map((item) => {
           return (

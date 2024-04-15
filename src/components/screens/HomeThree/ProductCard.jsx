@@ -14,7 +14,7 @@ const ProductCard = ({
   average_rating,
 }) => {
   return (
-    <div className="p-3 w-1/6 border-r border-[#E5E7EB]">
+    <div className="p-3 w-1/6 border-r border-[#E5E7EB] xl:border-b xl:border-[#E5E7EB] xl:w-1/3 sm:w-1/2 mobileM:w-full">
       <div>
         <Button
           color="red_700"
@@ -23,11 +23,14 @@ const ProductCard = ({
         >
           {discount}%
         </Button>
-        <Img
-          src={image_url}
-          alt="link1two_one"
-          className="justify-center h-[170px] w-[170px] object-center "
-        />
+        <div className="w-full xl:flex xl:justify-center">
+          <Img
+            src={image_url}
+            alt="link1two_one"
+            className="  h-[170px] w-[170px] object-center "
+          />
+        </div>
+
         <div className="flex items-center justify-between mb-2 ">
           <div>
             {organic && <img src="images/span.badge.png" alt="organic" />}

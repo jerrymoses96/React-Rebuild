@@ -6,7 +6,7 @@ import ProductCard2 from "./Productcard2";
 
 export function NewArrivals() {
   return (
-    <div className="flex mt-7 ">
+    <div className="flex mt-7 xl:flex-col  ">
       {/* review section  */}
       <div className="border border-[#E5E7EB] rounded-lg  ">
         <div className="flex items-center gap-5 border-b border-[#E5E7EB] p-5 ">
@@ -58,7 +58,7 @@ export function NewArrivals() {
         </div>
       </div>
       {/* slider */}
-      <div className="flex w-full border rounded-lg border-[#E5E7EB]">
+      <div className="flex w-full justify-center border rounded-lg border-[#E5E7EB] flex-wrap">
         {data2.map((item) => {
           return (
             <ProductCard2

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Img, RatingBar, Text } from "../..";
+import { RatingBar } from "../..";
 import data from "../../../components/general/data.json";
 import { BannerImage1 } from "./BannerImage1";
 import { Categories } from "./Categories";
@@ -19,37 +19,7 @@ import { NewArrivals } from "./NewArrivals";
 import { NewArrivalsHead } from "./NewArrivalsHead";
 import { NewProductSlider } from "./NewProductSlider";
 import { NewProductsHead } from "./NewProductsHead";
-
-function CategoriesHead() {
-  return (
-    <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
-      <div className="flex flex-row justify-start items-baseline gap-[15px]">
-        <Heading
-          size="3xl"
-          as="h3"
-          className="!text-black-900 tracking-[-0.36px]"
-        >
-          Top Categories
-        </Heading>
-        <Text as="p" className="!text-blue_gray-300 tracking-[-0.32px]">
-          New products with updated stocks.
-        </Text>
-      </div>
-      <Button
-        size="lg"
-        rightIcon={
-          <Img
-            src="images/img_iklbiconmoveright_gray_900_02.svg"
-            alt="i.klb-icon-move-right"
-          />
-        }
-        className="gap-[5px] !text-gray-900_02 tracking-[-0.24px] font-bold border-gray-200 border border-solid min-w-[97px] rounded-[17px]"
-      >
-        View All
-      </Button>
-    </div>
-  );
-}
+import { CategoriesHead } from "./CategoriesHead";
 
 export default function HomeThreePage() {
   const [sliderState, setSliderState] = React.useState(0);
