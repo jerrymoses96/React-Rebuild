@@ -3,19 +3,18 @@ import { Button, Heading, Img, Text } from "../..";
 
 export function CategoriesHead() {
   return (
-    <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
-      <div className="flex flex-row justify-start items-baseline gap-[15px]">
-        <Heading
-          size="3xl"
-          as="h3"
-          className="!text-black-900 tracking-[-0.36px]"
-        >
-          Top Categories
-        </Heading>
-        <Text as="p" className="!text-blue_gray-300 tracking-[-0.32px]">
-          New products with updated stocks.
-        </Text>
-      </div>
+    <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-5 sm:mt-5">
+      <Heading
+        size="3xl"
+        as="h3"
+        className="!text-black-900 tracking-[-0.36px]"
+      >
+        Top Categories
+      </Heading>
+
+      <Text as="p" className="!text-blue_gray-300 tracking-[-0.32px]">
+        New products with updated stocks.
+      </Text>
       <Button
         size="lg"
         rightIcon={

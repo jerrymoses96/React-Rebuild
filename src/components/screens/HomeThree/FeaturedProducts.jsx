@@ -5,10 +5,10 @@ import ProductCard3 from "./ProductCard3";
 
 export function FeaturedProducts() {
   return (
-    <div className="border border-[#E5E7EB] rounded-lg flex justify-start">
+    <div className="border border-[#E5E7EB] rounded-lg flex md:flex-col md:gap-2  justify-start">
       {/* image div  */}
 
-      <div className="h-[364px] w-80 rounded-lg border-gray-200 border-r border-solid relative">
+      <div className="h-[364px] md:w-full w-80 rounded-lg border-gray-200 border-r border-solid relative">
         <div className="absolute top-5 left-5 z-10 flex flex-col  gap-2">
           <p className=" text-red-700 tracking-[-0.24px] ">Only This Week</p>
           <p className="text-black-900 tracking-[-0.24px] text-xl font-bold">
@@ -34,10 +34,10 @@ export function FeaturedProducts() {
         <Img
           src="images/img_banner_16_jpg.png"
           alt="only_this_week"
-          className="justify-center h-[364px] rounded-lg w-full sm:w-full left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
+          className="justify-center h-[364px] rounded-lg w-full  left-0 bottom-0 right-0 top-0 m-auto object-cover absolute"
         />
       </div>
-      <div className="flex flex-row md:flex-col w-full">
+      <div className="flex flex-wrap justify-center flex-row w-full md:border-t md:border-[#E5E7EB] border-r border-[#E5E7EB]">
         {data3.map((item) => {
           return (
             <ProductCard3

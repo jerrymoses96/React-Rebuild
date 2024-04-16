@@ -14,7 +14,7 @@ const ProductCard3 = ({
   average_rating,
 }) => {
   return (
-    <div className="px-3 pt-3 w-1/4 border-r border-[#E5E7EB]">
+    <div className="px-3 pt-3 w-1/4 sm:w-1/2 mobileM:w-full mobileM:border-b  mobileM:border-[#E5E7EB]  border-r border-[#E5E7EB]">
       <div>
         <div className="flex justify-between items-center">
           <Button
@@ -26,12 +26,14 @@ const ProductCard3 = ({
           </Button>
           <CiHeart size={20} />
         </div>
+        <div className="flex justify-center">
+          <Img
+            src={image_url}
+            alt="link1two_one"
+            className="justify-center h-[170px] w-[170px] object-center "
+          />
+        </div>
 
-        <Img
-          src={image_url}
-          alt="link1two_one"
-          className="justify-center h-[170px] w-[170px] object-center "
-        />
         <div className="flex items-center justify-between mb-2 ">
           <div>
             {organic && <img src="images/span.badge.png" alt="organic" />}
