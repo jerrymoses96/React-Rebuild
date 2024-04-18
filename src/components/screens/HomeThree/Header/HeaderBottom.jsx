@@ -7,20 +7,23 @@ export function HeaderBottom(props) {
   return (
     <div className=" wrapper flex flex-row justify-center  py-4 border-gray-200 border-b border-solid bg-white-A700">
       <div className="flex flex-row justify-center w-full md:px-5 max-w-[1360px]">
-        <div className="flex flex-row md:flex-col justify-center items-center w-full md:gap-5">
+        <div className="flex flex-row tablet:justify-center  justify-center xl:justify-between items-center w-full md:gap-5">
           <Img
             src="images/img_link_grogin_logo_dark_png.png"
             alt="linkgrogin_one"
-            className="w-[11%] md:w-full md:h-[34px] object-cover"
+            className="w-[100px] "
           />
-          <div className="flex flex-row justify-center w-[3%] md:w-full ml-[23px] p-[7px] md:ml-0 sm:ml-5 bg-rose-100 rounded-[19px]">
-            <Img
-              src="images/img_link_black_900.svg"
-              alt="link_one"
-              className="h-[24px] w-[24px]"
-            />
+
+          <div className="flex flex-row justify-center xl:hidden w-[3%] md:w-full ml-[23px] p-[7px] md:ml-0 sm:ml-5 bg-rose-100 rounded-[19px]">
+            <div>
+              <Img
+                src="images/img_link_black_900.svg"
+                alt="link_one"
+                className="h-[24px] w-[24px]"
+              />
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-start w-[4%] md:w-full ml-[7px] md:ml-0">
+          <div className="flex flex-col items-start xl:hidden justify-start w-[4%] md:w-full ml-[7px] md:ml-0">
             <a href="#" className="opacity-0.7">
               <Text
                 size="s"
@@ -62,84 +65,39 @@ export function HeaderBottom(props) {
                 />
               )
             }
-            className="w-[64%] md:w-full ml-6 gap-[35px] md:ml-0 sm:ml-5 text-gray-600"
+            className="w-[64%]  ml-6 gap-[35px] xl:hidden md:ml-0 sm:ml-5 text-gray-600"
           />
-          <div className="flex flex-col items-center justify-start w-[14%] md:w-full ml-[25px] gap-1 md:ml-0 sm:ml-5">
-            <div className="flex flex-row justify-between items-center w-[91%] md:w-full">
+          <div className="flex items-center justify-between ml-5 w-[16%] xl:w-[16%] lg:w-[18%] md:w-[24%] sm:w-[30%] tablet:hidden">
+            {/* new 3 icons  */}
+            <div className="flex flex-col items-center">
               <Img
                 src="images/img_link_black_900_26x26.svg"
                 alt="link_three"
                 className="h-[26px] w-[26px]"
               />
-              <div className="flex flex-row w-[61%] gap-[39px]">
-                <div className="h-[30px] w-[32%] sm:w-full relative">
-                  <Img
-                    src="images/img_link_26x26.svg"
-                    alt="image"
-                    className="h-[26px] w-[26px] bottom-0 left-0 m-auto absolute"
-                  />
-                  <a
-                    href="#"
-                    className="flex justify-center items-center h-[17px] w-[17px] right-0 top-0 p-[3px] m-auto bg-red-700 absolute rounded-lg"
-                  >
-                    <Heading
-                      size="xs"
-                      as="p"
-                      className="!text-red-50 tracking-[-0.32px]"
-                    >
-                      0
-                    </Heading>
-                  </a>
-                </div>
-                <div className="h-[30px] w-[32%] sm:w-full relative">
-                  <Img
-                    src="images/img_link_1.svg"
-                    alt="link_one"
-                    className="h-[26px] w-[26px] bottom-0 left-0 m-auto absolute"
-                  />
-                  <a
-                    href="#"
-                    className="flex justify-center items-center h-[17px] w-[17px] right-0 top-0 p-[3px] m-auto bg-red-700 absolute rounded-lg"
-                  >
-                    <Heading
-                      size="xs"
-                      as="p"
-                      className="!text-red-50 tracking-[-0.32px]"
-                    >
-                      0
-                    </Heading>
-                  </a>
-                </div>
+              <p className="text-xs font-medium">Account</p>
+            </div>
+            <div className="flex flex-col items-center relative">
+              <Img
+                src="images/img_link_26x26.svg"
+                alt="image"
+                className="h-[26px] w-[26px] "
+              />
+              <p className="text-xs font-medium">Wishlist</p>
+              <div className="bg-red-700 absolute top-[-5px] right-0 rounded-full w-[17px] text-center text-white-A700 text-xs font-semibold">
+                0
               </div>
             </div>
-            <div className="flex flex-row justify-between w-full">
-              <a href="#">
-                <Text
-                  size="md"
-                  as="p"
-                  className="!text-black-900 tracking-[-0.32px] !font-medium"
-                >
-                  Account
-                </Text>
-              </a>
-              <a href="#">
-                <Text
-                  size="md"
-                  as="p"
-                  className="!text-black-900 tracking-[-0.32px] !font-medium"
-                >
-                  Wishlist
-                </Text>
-              </a>
-              <a href="#">
-                <Text
-                  size="md"
-                  as="p"
-                  className="!text-black-900 tracking-[-0.32px] !font-medium"
-                >
-                  Your Cart
-                </Text>
-              </a>
+            <div className="flex flex-col items-center relative">
+              <Img
+                src="images/img_link_1.svg"
+                alt="link_one"
+                className="h-[26px] w-[26px] "
+              />
+              <p className="text-xs font-medium">Your Cart</p>
+              <div className="bg-red-700 absolute top-[-5px] right-0 rounded-full w-[17px] text-center text-white-A700 text-xs font-semibold">
+                0
+              </div>
             </div>
           </div>
         </div>

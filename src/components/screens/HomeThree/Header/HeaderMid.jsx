@@ -1,13 +1,12 @@
-import React from "react";
-import { Text, RatingBar } from "../../..";
-import "../../../../styles/index.css";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { Text } from "../../..";
+import "../../../../styles/index.css";
 
 export function HeaderMid() {
   return (
-    <div className="wrapper flex flex-row justify-center py-3 border-gray-200 border-b border-solid bg-white-A700">
-      <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10 md:px-5 max-w-[1360px]">
-        <div className="flex flex-row sm:flex-col justify-start gap-3.5 sm:gap-5">
+    <div className="wrapper flex tablet:hidden flex-row justify-center py-3 border-gray-200 border-b border-solid bg-white-A700">
+      <div className="flex flex-row  md:flex-col justify-between items-center w-full md:gap-5 md:px-5 max-w-[1360px]">
+        <div className="flex flex-row  justify-start gap-3.5 sm:gap-5">
           <a href="#">
             <Text size="md" as="p" className="tracking-[-0.32px] !font-medium">
               About Us

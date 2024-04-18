@@ -9,7 +9,7 @@ export function HeaderTop() {
 
   return (
     <div className="w-[100%] bg-deep_purple-600">
-      <div className="wrapper flex flex-row md:flex-col justify-center  w-full gap-[194px] p-[9px] md:gap-10">
+      <div className="wrapper flex md:flex-col justify-center w-full gap-[194px] p-[9px] md:gap-5">
         <Heading
           size="md"
           as="p"
@@ -18,7 +18,7 @@ export function HeaderTop() {
           FREE delivery & 40% Discount for next 3 orders! Place your 1st order
           in.
         </Heading>
-        <div className="flex flex-row sm:flex-col justify-center items-center md:w-full sm:gap-5">
+        <div className="flex flex-row  justify-center items-center ">
           <Text
             size="md"
             as="p"
@@ -29,7 +29,7 @@ export function HeaderTop() {
           <Heading
             size="3xl"
             as="h6"
-            className="h-[22px] ml-[13px] sm:ml-0 !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
+            className="h-[22px] ml-[13px]  !text-white-A700 tracking-[-0.32px] flex justify-center items-center"
           >
             {days}
           </Heading>

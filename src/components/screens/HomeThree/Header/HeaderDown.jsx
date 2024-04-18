@@ -4,7 +4,7 @@ import "../../../../styles/index.css";
 
 export function HeaderDown() {
   return (
-    <div className="wrapper flex flex-row md:flex-col justify-between  bg-white-A700">
+    <div className="wrapper flex flex-row md:flex-col md:hidden justify-between  bg-white-A700">
       <div className="flex flex-row md:flex-col justify-center items-center  md:gap-5 ">
         <a href="#">
           <Heading
