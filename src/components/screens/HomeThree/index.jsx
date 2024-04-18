@@ -53,7 +53,7 @@ export default function HomeThreePage() {
                 sliderRef1={sliderRef1}
               />
 
-              <div className="flex flex-col items-center justify-start wrapper md:w-full">
+              <div className="flex flex-col items-center justify-start wrapper ">
                 {/* top categories  */}
                 <div className="flex flex-col items-center justify-start w-full gap-5">
                   <CategoriesHead />

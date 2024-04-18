@@ -10,7 +10,7 @@ export function Header(props) {
       {/* Headertop  */}
 
       <HeaderTop />
-      <div className="flex flex-col items-center justify-start w-full border-gray-200 border-b border-solid">
+      <div className="flex flex-col items-center wrapper justify-start w-full border-gray-200 border-b border-solid">
         <HeaderMid />
         <HeaderBottom
           searchBarValue1={props.searchBarValue1}

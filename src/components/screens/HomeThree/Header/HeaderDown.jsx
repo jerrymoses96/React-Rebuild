@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heading, Img } from "../../..";
 import "../../../../styles/index.css";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 
 export function HeaderDown() {
+  const [showHamburgerDropdown, setShowHamburgerDropdown] = useState(false);
+
+  const toggleHamburgerDropdown = () => {
+    setShowHamburgerDropdown((prevState) => !prevState);
+  };
+
+  const closeHamburgerDropdown = () => {
+    setShowHamburgerDropdown(false);
+  };
   return (
-    <div className="wrapper flex flex-row md:flex-col md:hidden justify-between  bg-white-A700">
-      <div className="flex flex-row md:flex-col justify-center items-center  md:gap-5 ">
+    <div className="wrapper flex flex-row justify-between  bg-white-A700">
+      <div className="hidden md:block">
+        <RxHamburgerMenu />
+        <RxCross2 />
+      </div>
+      <div className="flex flex-row md:hidden justify-center items-center ">
         <a href="#">
           <Heading
             size="xl"
@@ -71,7 +86,7 @@ export function HeaderDown() {
           </Heading>
         </a>
       </div>
-      <div className="flex flex-row md:flex-col justify-center items-center  md:gap-5">
+      <div className="flex flex-row md:flex-col md:hidden justify-center items-center  md:gap-5">
         <a href="#">
           <Heading
             size="xl"
